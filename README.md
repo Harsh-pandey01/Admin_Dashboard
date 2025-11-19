@@ -21,7 +21,7 @@ Preview this app on :-
 
 Screenshots of the application -
 
-![alt text](<../../Pictures/Screenshots/Screenshot 2025-11-20 000411.png>)
+
 
 
 
