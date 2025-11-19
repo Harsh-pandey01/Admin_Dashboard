@@ -1,0 +1,1 @@
+import{l as e}from"./index-IuWHjyWA.js";function r(){return e.jsx("div",{className:"bg-white h-screen  text-black w-full flex items-center justify-center",children:"OOPS ! this page does not exist ."})}export{r as default};
