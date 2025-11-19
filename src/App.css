@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root{
+  --bg-primary :var(--color-neutral-100) ;
+  --bg-secondry : var(--color-neutral-100) ;
+  --color-text : var(--color-neutral-900) ;
+  --color-secText : var(--color-neutral-700) ;
+  --color-border : var(--color-neutral-200) ;  
+}
+
+.dark{
+   --bg-primary :var(--color-slate-900) ;
+  --bg-secondry : var(--color-slate-800) ;
+  --color-text : var(--color-neutral-100) ;
+  --color-secText : var(--color-neutral-300) ;
+  --color-border : var(--color-neutral-600) ; 
+}
+
+@theme inline{
+     --color-primary :var(--bg-primary) ;
+  --color-secondry : var(--bg-secondry) ;
+  --color-text : var(--color-text) ;
+  --color-secText : var(--color-secText) ;
+  --color-border : var(--color-border) ; 
+}
+
+@theme {
+  --font-grot :"Hanken Grotesk", sans-serif ;
+  --font-inter : "Inter" ;
+  --font-robo : "Roboto" , sans-serif ;
+
+  --animate-slideIn : slideIn 1s ease-in forwards ;
+
+  @keyframes slideIn {
+    0%{
+     left : "-100%";
+    }
+    100%{
+     left : 0 ;
+
+    }
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;              /* Firefox */
+   
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;            /* No track background */
+  }
+
+ 
+}
