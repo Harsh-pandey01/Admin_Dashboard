@@ -16,13 +16,13 @@ Following are some features of the DashPro -
 - Mordern UI .
 - Scalable Tables and charts .
 
-Preview this app on :- 
+Preview this app on :- https://dashproadmin.netlify.app/
 
 
 Screenshots of the application -
 
 
-=======
+
 <img width="1904" height="870" alt="Screenshot 2025-11-20 000423" src="https://github.com/user-attachments/assets/91d6bb3f-2dc0-4a9d-b38a-871a6f7d1bf5" />
 <img width="1898" height="866" alt="Screenshot 2025-11-20 000411" src="https://github.com/user-attachments/assets/e2188119-819c-448f-8231-f6eaac84162a" />
 <img width="1619" height="777" alt="Screenshot 2025-11-20 000507" src="https://github.com/user-attachments/assets/536f35c7-27c8-4ace-bb85-0f493c573743" />
