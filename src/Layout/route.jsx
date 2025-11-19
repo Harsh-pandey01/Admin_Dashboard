@@ -1,37 +1,73 @@
 import { createBrowserRouter } from "react-router";
+import { lazy, Suspense } from "react";
 import Layout from "./Layout";
-import Home from "../pages/Home";
-import Products from "../pages/Products";
-import ErrorPage from "../pages/ErrorPage";
-import OrdersPage from "../pages/OrdersPage";
-import SettingsPage from "../pages/Setting";
-import ProfilePage from "../pages/Profile";
+
+// Lazy Loaded Pages
+const Home = lazy(() => import("../pages/Home"));
+const Products = lazy(() => import("../pages/Products"));
+const OrdersPage = lazy(() => import("../pages/OrdersPage"));
+const SettingsPage = lazy(() => import("../pages/Setting"));
+const ProfilePage = lazy(() => import("../pages/Profile"));
+const ErrorPage = lazy(() => import("../pages/ErrorPage"));
+
+// Fallback Loader Component
+const Loader = () => (
+  <div className="p-10 text-center text-lg font-medium">Loading...</div>
+);
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Layout />
+      </Suspense>
+    ),
+    errorElement: (
+      <Suspense fallback={<Loader />}>
+        <ErrorPage />
+      </Suspense>
+    ),
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: "products",
-        element: <Products />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Products />
+          </Suspense>
+        ),
       },
       {
         path: "orders",
-        element: <OrdersPage />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <OrdersPage />
+          </Suspense>
+        ),
       },
       {
         path: "settings",
-        element: <SettingsPage />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <SettingsPage />
+          </Suspense>
+        ),
       },
       {
         path: "profile",
-        element: <ProfilePage />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <ProfilePage />
+          </Suspense>
+        ),
       },
     ],
   },
