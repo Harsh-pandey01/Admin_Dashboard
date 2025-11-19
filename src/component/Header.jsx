@@ -11,7 +11,7 @@ function Header({ setIsSmallToggleOpen }) {
     <div className="w-full flex items-center justify-between px-5 py-3 border-b border-border font-grot">
       <div className="flex items-center gap-5">
         <Link to={"/"} className="text-2xl font-semibold">
-          AdminDash
+          DashPro
         </Link>
         <div
           onClick={() => {
